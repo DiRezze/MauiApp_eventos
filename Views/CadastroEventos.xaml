@@ -4,35 +4,71 @@
              x:Class="MauiGerenteDeEventos.Views.CadastroEventos"
              Title="Cadastro de Eventos"
              NavigationPage.HasNavigationBar="False">
-    <VerticalStackLayout>
-        <Label Text="Nome do Evento" FontAttributes="Bold" />
-        <Entry Text="{Binding Nome}" Placeholder="Digite o nome do evento" />
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30"
+            Spacing="16"
+            HorizontalOptions="FillAndExpand">
 
-        <Label Text="Data de Início" FontAttributes="Bold" />
-        <DatePicker Date="{Binding DataInicio}" />
+            <VerticalStackLayout Spacing="4">
+                <Label Text="Nome do Evento" FontAttributes="Bold" />
+                <Entry Text="{Binding Nome}" Placeholder="Digite o nome do evento" />
+            </VerticalStackLayout>
 
-        <Label Text="Data de Término" FontAttributes="Bold" />
-        <DatePicker Date="{Binding DataTermino}" />
+            <VerticalStackLayout Spacing="4">
+                <Label Text="Local do Evento" FontAttributes="Bold" />
+                <Entry Text="{Binding Local}" Placeholder="Digite o local do evento" />
+            </VerticalStackLayout>
 
-        <Label Text="Número de Participantes" FontAttributes="Bold" />
-        <Entry Text="{Binding NumeroParticipantes}" Keyboard="Numeric" Placeholder="Digite o número de participantes" />
+            <Frame BackgroundColor="Transparent" 
+                   BorderColor="{StaticResource Gray600}" 
+                   Padding="10">
+                <VerticalStackLayout HorizontalOptions="CenterAndExpand">
+                    
+                    <HorizontalStackLayout Padding="4"
+                                           Spacing="10">
+                        <HorizontalStackLayout HorizontalOptions="Center" 
+                                               VerticalOptions="Center">
+                            <Label Text="Data de Início: " 
+                                   FontAttributes="Bold"
+                                   VerticalOptions="CenterAndExpand"
+                                   Margin="0, 0, 10, 0"/>
+                            <DatePicker Date="{Binding DataInicio}" />
+                        </HorizontalStackLayout>
 
-        <Label Text="Local do Evento" FontAttributes="Bold" />
-        <Entry Text="{Binding Local}" Placeholder="Digite o local do evento" />
+                        <HorizontalStackLayout HorizontalOptions="Center" 
+                                               VerticalOptions="Center">
+                            <Label Text="Data de Término:" 
+                                   FontAttributes="Bold"
+                                   VerticalOptions="CenterAndExpand"
+                                   Margin="0, 0, 10, 0"
+                                   />
+                            <DatePicker Date="{Binding DataTermino}" />
+                        </HorizontalStackLayout>
 
-        <Label Text="Custo por Participante" FontAttributes="Bold" />
-        <Entry Text="{Binding CustoPorParticipante}" Keyboard="Numeric" Placeholder="Digite o custo por participante" />
+                    </HorizontalStackLayout>
+                    
+                </VerticalStackLayout>
+            </Frame>
 
-        <Button Text="Finalizar Cadastro"
-                Command="{Binding Source={x:Reference rootPage}, Path=BindingContext.CadastrarCommand}" />
 
-        <Label Text="Resumo do Evento" FontAttributes="Bold" FontSize="Large" Margin="0,20,0,0"/>
-        <Label Text="{Binding Nome, StringFormat='Nome: {0}'}" />
-        <Label Text="{Binding Local, StringFormat='Local: {0}'}" />
-        <Label Text="{Binding DataInicio, StringFormat='Data de Início: {0:dd/MM/yyyy}'}" />
-        <Label Text="{Binding DataTermino, StringFormat='Data de Término: {0:dd/MM/yyyy}'}" />
-        <Label Text="{Binding DuracaoEmDias, StringFormat='Duração: {0} dias'}" />
-        <Label Text="{Binding NumeroParticipantes, StringFormat='Participantes: {0}'}" />
-        <Label Text="{Binding CustoTotal, StringFormat='Custo Total: {0:C}'}" FontAttributes="Bold" />
-    </VerticalStackLayout>
+            <HorizontalStackLayout Spacing="4" HorizontalOptions="FillAndExpand">
+                <Label Text="Número de Participantes: " 
+                       FontAttributes="Bold" 
+                       VerticalOptions="Center"
+                       Margin="0, 0, 10, 0"/>
+
+                <Entry Text="{Binding NumeroParticipantes}"
+                       HorizontalOptions="FillAndExpand"
+                       Keyboard="Numeric" 
+                       Placeholder="Nº de participantes" />
+            </HorizontalStackLayout>
+
+            <Label Text="Custo por Participante" FontAttributes="Bold" />
+            <Entry Text="{Binding CustoPorParticipante}" Keyboard="Numeric" Placeholder="Digite o custo por participante" />
+
+            <Button Text="Finalizar Cadastro" />
+            
+        </VerticalStackLayout>
+    </ScrollView>
 </ContentPage>
