@@ -63,7 +63,12 @@
 
 	<ItemGroup>
 	  <Folder Include="Resources\Images\" />
-	  <Folder Include="Views\" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <MauiXaml Update="Views\CadastroEventos.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	</ItemGroup>
 
 </Project>

@@ -1,4 +1,6 @@
-﻿namespace MauiGerenteDeEventos
+﻿using MauiGerenteDeEventos.Views;
+
+namespace MauiGerenteDeEventos
 {
     public partial class App : Application
     {
