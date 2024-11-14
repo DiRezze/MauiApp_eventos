@@ -9,9 +9,13 @@
             Padding="30"
             Spacing="24">
 
-            <Label Text="Lista de Eventos" HorizontalTextAlignment="Center" FontSize="32" FontAttributes="Bold" />
+            <Label Text="Gerente de Eventos" HorizontalTextAlignment="Center" FontSize="32" FontAttributes="Bold" />
 
-            <Button Clicked="Button_Clicked" Text="Cadastrar novo evento"/>
+            <HorizontalStackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
+                <Image Source="img01.png" HorizontalOptions="CenterAndExpand" MaximumHeightRequest="320"/>
+            </HorizontalStackLayout>
+
+            <Button Clicked="Button_Clicked" Text="Criar novo evento"/>
 
         </VerticalStackLayout>
     </ScrollView>

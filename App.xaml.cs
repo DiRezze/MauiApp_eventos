@@ -18,6 +18,9 @@ namespace MauiGerenteDeEventos
 
             window.Height = 640;
             window.Width = 580;
+
+            window.Title = "MauiApp Gerente de Eventos";
+
             return window;
         }
     }
