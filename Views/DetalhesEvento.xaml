@@ -4,12 +4,20 @@
              x:Class="MauiGerenteDeEventos.Views.DetalhesEvento"
              Title="DetalhesEvento"
              NavigationPage.HasNavigationBar="False">
-    
+
     <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
         
+        <Label x:Name="nomeLabel" FontAttributes="Bold" />
+        <Label x:Name="localLabel" FontAttributes="Bold" />
+        <Label x:Name="dataInicioLabel" FontAttributes="Bold" />
+        <Label x:Name="dataTerminoLabel" FontAttributes="Bold" />
+        <Label x:Name="participantesLabel" FontAttributes="Bold" />
+        <Label x:Name="custoLabel" FontAttributes="Bold" />
+
+        <Label x:Name="custoTotalLabel" FontAttributes="Bold" />
+        <Label x:Name="duracaoLabel" FontAttributes="Bold" />
+
+        <Button x:Name="retornar" Clicked="retornar_Clicked" Text="Voltar"/>
+
     </VerticalStackLayout>
 </ContentPage>
