@@ -4,20 +4,41 @@
              x:Class="MauiGerenteDeEventos.Views.DetalhesEvento"
              Title="DetalhesEvento"
              NavigationPage.HasNavigationBar="False">
+    <ScrollView>
+        <VerticalStackLayout Margin="20" Spacing="24">
 
-    <VerticalStackLayout>
-        
-        <Label x:Name="nomeLabel" FontAttributes="Bold" />
-        <Label x:Name="localLabel" FontAttributes="Bold" />
-        <Label x:Name="dataInicioLabel" FontAttributes="Bold" />
-        <Label x:Name="dataTerminoLabel" FontAttributes="Bold" />
-        <Label x:Name="participantesLabel" FontAttributes="Bold" />
-        <Label x:Name="custoLabel" FontAttributes="Bold" />
+            <Label x:Name="nomeLabel" FontAttributes="Bold" FontSize="48" HorizontalOptions="CenterAndExpand" />
+            
+            <Label x:Name="localLabel" FontAttributes="Bold" />
 
-        <Label x:Name="custoTotalLabel" FontAttributes="Bold" />
-        <Label x:Name="duracaoLabel" FontAttributes="Bold" />
+            <Frame BackgroundColor="Transparent" BorderColor="{StaticResource Gray600}">
+                <HorizontalStackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" 
+                                           Spacing="48">
+                        <Label x:Name="dataInicioLabel" FontAttributes="Bold" />
+                        <Label x:Name="dataTerminoLabel" FontAttributes="Bold" />
+                        <Label x:Name="duracaoLabel" FontAttributes="Bold" />
+                    </HorizontalStackLayout>
+            </Frame>
 
-        <Button x:Name="retornar" Clicked="retornar_Clicked" Text="Voltar"/>
+            <Frame BackgroundColor="Transparent" BorderColor="{StaticResource Gray600}">
+                <VerticalStackLayout Spacing="16" VerticalOptions="CenterAndExpand">
+                    <HorizontalStackLayout Spacing="8" HorizontalOptions="CenterAndExpand">
+                        <Label x:Name="participantesLabel" FontAttributes="Bold" />
+                        <Label x:Name="custoLabel" FontAttributes="Bold" />
+                    </HorizontalStackLayout>
 
-    </VerticalStackLayout>
+                    <Label x:Name="custoTotalLabel" FontAttributes="Bold" />
+                    
+                </VerticalStackLayout>
+            </Frame>
+
+            <Button x:Name="retornar" Clicked="retornar_Clicked" Text="Voltar"
+                    BackgroundColor="Transparent"
+                    TextColor="{StaticResource PrimaryDark}"
+                    BorderColor="{StaticResource PrimaryDark}"
+                    BorderWidth="1"
+                    />
+
+        </VerticalStackLayout>
+    </ScrollView>
 </ContentPage>
