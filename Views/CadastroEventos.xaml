@@ -67,7 +67,7 @@
             <Label Text="Custo por Participante" FontAttributes="Bold" />
             <Entry Text="{Binding CustoPorParticipante}" Keyboard="Numeric" Placeholder="Digite o custo por participante" />
 
-            <Button Text="Finalizar Cadastro" />
+            <Button Text="Prosseguir" />
             
         </VerticalStackLayout>
     </ScrollView>
