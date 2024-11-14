@@ -9,6 +9,16 @@ namespace MauiGerenteDeEventos
             InitializeComponent();
 
             MainPage = new NavigationPage(new MainPage());
+
+        }
+
+        protected override Window CreateWindow(IActivationState? activationState)
+        {
+            var window = base.CreateWindow(activationState);
+
+            window.Height = 640;
+            window.Width = 580;
+            return window;
         }
     }
 }
