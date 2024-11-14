@@ -12,12 +12,12 @@
 
             <VerticalStackLayout Spacing="4">
                 <Label Text="Nome do Evento" FontAttributes="Bold" />
-                <Entry Text="{Binding Nome}" Placeholder="Digite o nome do evento" />
+                <Entry Placeholder="Digite o nome do evento" x:Name="nomeEntry" />
             </VerticalStackLayout>
 
             <VerticalStackLayout Spacing="4">
-                <Label Text="Local do Evento" FontAttributes="Bold" />
-                <Entry Text="{Binding Local}" Placeholder="Digite o local do evento" />
+                <Label Text="Local do Evento"  FontAttributes="Bold" />
+                <Entry Placeholder="Digite o local do evento" x:Name="localEntry" />
             </VerticalStackLayout>
 
             <Frame BackgroundColor="Transparent" 
@@ -33,7 +33,9 @@
                                    FontAttributes="Bold"
                                    VerticalOptions="CenterAndExpand"
                                    Margin="0, 0, 10, 0"/>
-                            <DatePicker Date="{Binding DataInicio}" />
+                            <DatePicker x:Name="dataInicioPicker"
+                                        Format="dd/MM/yyyy"
+                                        DateSelected="dataInicioPicker_DateSelected"/>
                         </HorizontalStackLayout>
 
                         <HorizontalStackLayout HorizontalOptions="Center" 
@@ -43,7 +45,7 @@
                                    VerticalOptions="CenterAndExpand"
                                    Margin="0, 0, 10, 0"
                                    />
-                            <DatePicker Date="{Binding DataTermino}" />
+                            <DatePicker x:Name="dataTerminoPicker" Format="dd/MM/yyyy"/>
                         </HorizontalStackLayout>
 
                     </HorizontalStackLayout>
@@ -58,16 +60,16 @@
                        VerticalOptions="Center"
                        Margin="0, 0, 10, 0"/>
 
-                <Entry Text="{Binding NumeroParticipantes}"
+                <Entry x:Name="numeroParticipantesEntry"
                        HorizontalOptions="FillAndExpand"
                        Keyboard="Numeric" 
                        Placeholder="Nº de participantes" />
             </HorizontalStackLayout>
 
             <Label Text="Custo por Participante" FontAttributes="Bold" />
-            <Entry Text="{Binding CustoPorParticipante}" Keyboard="Numeric" Placeholder="Digite o custo por participante" />
+            <Entry x:Name="custoPorParticipanteEntry" Keyboard="Numeric" Placeholder="Digite o custo por participante" />
 
-            <Button Text="Prosseguir" />
+            <Button Text="Prosseguir" Clicked="Button_Clicked" />
             
         </VerticalStackLayout>
     </ScrollView>
